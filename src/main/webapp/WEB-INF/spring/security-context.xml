@@ -11,6 +11,12 @@
 		<intercept-url pattern="/security/member" access="hasRole('ROLE_MEMBER')" />
 		<intercept-url pattern="/security/admin" access="hasRole('ROLE_ADMIN')" />
 		
+		<!--login-page: 로그인 인증을 처리할 주소는 /security/login/loginForm이다.
+	    default-target-url: 로그인이 완료되면 
+	    username-parameter: 로그인 페이지 form에 있는 username을 저장한 변수이름 지정
+	    password-parameter: 로그인 페이지 form에 있는 password을 저장한 변수이름 지정 
+	    login-processing-url: 로그인 페이지 form action에 입력할 주소 지정
+	    authentication-failure-url : 로그인 실패인 경우 호출할 주소 지정 -->
 		<!-- 로그인 페이지 커스텀 화 -->
     	<form-login login-page="/login/loginForm"
               default-target-url="/"
